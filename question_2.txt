@@ -1,0 +1,20 @@
+Question 2:
+
+PRETTYPRINT
+
+----------------------
+
+vector<vector<int> > Solution::prettyPrint(int A) {
+    int d=(A*2)-1;
+    vector<vector<int> > matrix (d , vector<int>(d,0));
+    for (int i=0; i<d;i++){
+        for(int j=i;j<d-i;j++){
+            matrix[i][j]=A-i;
+            matrix[j][i]=A-i;
+            matrix[(d-1)-j][(d-1)-i]=A-i;
+            matrix[(d-1)-i][(d-1)-j]=A-i;
+        }
+    }
+        
+    return matrix;
+}

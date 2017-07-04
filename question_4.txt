@@ -1,0 +1,26 @@
+Question 4:
+
+NEXTGREATER
+
+----------------------
+
+vector<int> Solution::nextGreater(vector<int> &A) {
+   int array_size=A.size();
+    vector<int> B(array_size);
+
+    int next, i, j;
+    for (i=0; i<array_size; i++)
+    {
+        next = -1;
+        for (j = i+1; j<array_size; j++)
+        {
+            if (A[i] < A[j])
+            {
+                next = A[j];
+                break;
+            }
+        }
+       B[i] =next;
+    }
+    return B;
+}

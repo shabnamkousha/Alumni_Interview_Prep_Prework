@@ -1,0 +1,27 @@
+Question 5:
+
+Longest Consecutive Sequence
+
+----------------------
+
+int Solution::longestConsecutive(const vector<int> &A) {
+    unordered_set<int> S;
+    int longest_length = 0;
+    int ar_size=A.size();
+    for (int i = 0; i < ar_size; i++)
+        S.insert(A[i]);
+ 
+    for (int i=0; i<ar_size; i++)
+    {
+
+        if (S.find(A[i]-1) == S.end())
+        {
+            int j = A[i];
+            while (S.find(j) != S.end())
+                j++;
+ 
+            longest_length = max(longest_length, j - A[i]);
+        }
+    }
+    return longest_length;
+}
