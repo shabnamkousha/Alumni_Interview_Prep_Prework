@@ -25,3 +25,5 @@ int Solution::longestConsecutive(const vector<int> &A) {
     }
     return longest_length;
 }
+
+

@@ -1,7 +1,9 @@
-Question 3:
+Question 1:
 
-Kth Smallest Element in the Array
+AMORTIZED2
 
 ----------------------
 
 o(n)
+
+

@@ -24,3 +24,5 @@ vector<int> Solution::nextGreater(vector<int> &A) {
     }
     return B;
 }
+
+

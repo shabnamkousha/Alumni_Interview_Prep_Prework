@@ -18,3 +18,5 @@ vector<vector<int> > Solution::prettyPrint(int A) {
         
     return matrix;
 }
+
+
